@@ -4,81 +4,102 @@
     <meta charset="UTF-8">
     <title>Elastic Beanstalk App from Jenkins</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            background: linear-gradient(135deg, #6dd5fa 0%, #2980b9 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            color: #fff;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.25);
-            padding: 50px 70px;
-            border-radius: 25px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+            background: rgba(255, 255, 255, 0.15);
+            padding: 55px 80px;
+            border-radius: 30px;
+            backdrop-filter: blur(18px);
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.35);
             text-align: center;
-            animation: slideUp 1.5s ease;
-            border: 1px solid rgba(255,255,255,0.5);
+            animation: fadeIn 1.5s ease forwards;
+            border: 1px solid rgba(255,255,255,0.35);
+            max-width: 600px;
+            width: 85%;
+            z-index: 2;
         }
 
         h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            font-size: 2.4rem;
+            margin-bottom: 18px;
+            text-shadow: 2px 3px 10px rgba(0,0,0,0.3);
+            font-weight: 600;
         }
 
         p {
-            font-size: 1.2rem;
-            color: #f9f9f9;
-            margin-top: 10px;
+            font-size: 1.17rem;
+            opacity: 0.9;
         }
 
         a {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 30px;
             text-decoration: none;
             background: #ffffff;
-            color: #4A47A3;
-            padding: 14px 30px;
-            font-size: 1.1rem;
-            border-radius: 40px;
+            color: #3168be;
+            padding: 14px 36px;
+            font-size: 1.15rem;
+            border-radius: 50px;
             font-weight: 600;
-            transition: 0.3s ease-in-out;
-            box-shadow: 0px 4px 20px rgba(255,255,255,0.4);
+            transition: 0.3s ease;
+            box-shadow: 0px 6px 20px rgba(255,255,255,0.3);
         }
 
         a:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0px 8px 25px rgba(255,255,255,0.6);
+            transform: translateY(-5px) scale(1.06);
+            box-shadow: 0px 12px 30px rgba(255,255,255,0.5);
         }
 
-        /* Background floating circles */
+        /* Floating circles */
         .circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.15);
             animation: float 8s infinite ease-in-out alternate;
-            z-index: 0;
+            filter: blur(1.5px);
         }
 
-        .circle.small { width: 120px; height: 120px; top: 10%; left: 15%; }
-        .circle.medium { width: 200px; height: 200px; bottom: 15%; right: 10%; }
-        .circle.large { width: 300px; height: 300px; top: 55%; left: 60%; }
+        .circle.small { width: 120px; height: 120px; top: 8%; left: 12%; }
+        .circle.medium { width: 220px; height: 220px; bottom: 12%; right: 10%; }
+        .circle.large { width: 320px; height: 320px; top: 55%; left: 62%; }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(45px); }
             to   { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes float {
-            from { transform: translateY(0px); }
+            from { transform: translateY(0); }
             to   { transform: translateY(-30px); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 30px;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            a {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
         }
     </style>
 </head>
