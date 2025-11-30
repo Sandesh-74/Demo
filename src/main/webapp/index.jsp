@@ -124,7 +124,7 @@
 
     <div class="container">
         <h1> Jenkins CI/CD Deployment</h1>
-        <p>This project is deployed on <b>Apache Tomcat</b> for the <i>Evening batch</i>.</p>
+        <p>This project is deployed on <b>Apache Tomcat</b>.</p>
         <p><a href="hello">Say Hello to Sandy </a></p>
     </div>
 
